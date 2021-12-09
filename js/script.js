@@ -14,20 +14,19 @@ let age = parseInt(prompt('Quanti anni hai?'))
 let ticketPrice = km * priceKm;
 console.log(ticketPrice);
 let discount;
-let discountedTicket;
 
 // successivamente eseguo lo sconto in base all'età dell'utente
 if (age < 18){
 
     discount = ticketPrice * minorenni;
 
-    discountedTicket = ticketPrice - discount;
+    ticketPrice = ticketPrice - discount;
 
     // discountedTicket= discountedTicket.toFixed(2);
     
-    console.log(discountedTicket);
+    console.log(ticketPrice);
     
-    output.innerHTML = `Il prezzo del tuo biglietto è di: ${discountedTicket.toFixed(2)} €.`;
+    output.innerHTML = `Il prezzo del tuo biglietto è di: ${ticketPrice.toFixed(2)} €.`;
     
 }
 
@@ -35,13 +34,13 @@ else if (age > 65){
 
     discount = ticketPrice * over65;
 
-    discountedTicket = ticketPrice - discount;
+    ticketPrice = ticketPrice - discount;
 
     // discountedTicket = discountedTicket.toFixed(2);
 
-    console.log(discountedTicket);
+    console.log(ticketPrice);
 
-    output.innerHTML = `Il prezzo del tuo biglietto è di: ${discountedTicket.toFixed(2)} €.`;
+    output.innerHTML = `Il prezzo del tuo biglietto è di: ${ticketPrice.toFixed(2)} €.`;
 }
 
 // questo else finale rigurda la fascia d'età che viene esclusa dallo sconto
